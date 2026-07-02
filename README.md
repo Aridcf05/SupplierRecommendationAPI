@@ -308,3 +308,10 @@ Universidad Peruana de Ciencias Aplicadas (UPC)
 # Licencia
 
 Proyecto desarrollado con fines académicos como parte del trabajo de investigación para optar el grado de Bachiller en Ingeniería de Sistemas de Información.
+
+
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+
+![FastAPI](https://img.shields.io/badge/FastAPI-REST_API-green)
+
+![Status](https://img.shields.io/badge/Status-In_Development-orange)
