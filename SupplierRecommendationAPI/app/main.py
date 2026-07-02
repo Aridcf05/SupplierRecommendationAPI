@@ -20,8 +20,4 @@ def recomendar(solicitud: Solicitud):
 
     ranking = recomendar_proveedores(solicitud)
 
-    return {
-        "success": True,
-        "producto": solicitud.producto,
-        "ranking": ranking
-    }
+    return ranking
