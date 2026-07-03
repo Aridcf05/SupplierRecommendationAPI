@@ -60,4 +60,10 @@ def generar_ranking(evaluacion):
 
     top3 = evaluacion.head(3)
 
+    top3 = top3.rename(columns={
+    "Precio Unitario": "Precio_Unitario",
+    "Dias Entrega": "Dias_Entrega",
+    "Score_Proveedor": "Score_Proveedor"
+    })
+    
     return top3
