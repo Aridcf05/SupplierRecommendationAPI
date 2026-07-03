@@ -1,0 +1,139 @@
+openapi: 3.0.1
+
+info:
+  title: Supplier Recommendation API
+  description: Sistema Inteligente de Selección de Proveedores
+  version: "1.0"
+
+servers:
+  - url: https://supplierrecommendationapi.onrender.com
+
+paths:
+
+  /health:
+    get:
+      summary: Health Check
+      operationId: Health
+      responses:
+        "200":
+          description: OK
+
+  /:
+    get:
+      summary: Inicio
+      operationId: Home
+      responses:
+        "200":
+          description: OK
+
+  /recomendar:
+    post:
+
+      summary: Recomendar proveedor
+
+      operationId: RecomendarProveedor
+
+      requestBody:
+
+        required: true
+
+        content:
+
+          application/json:
+
+            schema:
+
+              $ref: "#/components/schemas/Solicitud"
+
+      responses:
+
+        "200":
+
+          description: Ranking generado
+
+          content:
+
+            application/json:
+
+              schema:
+
+                $ref: "#/components/schemas/Recomendacion"
+
+components:
+
+  schemas:
+
+    Solicitud:
+
+      type: object
+
+      required:
+
+        - producto
+        - cantidad
+        - ciudad
+        - presupuesto
+
+      properties:
+
+        producto:
+          type: string
+
+        cantidad:
+          type: integer
+
+        ciudad:
+          type: string
+
+        presupuesto:
+          type: number
+
+    Ranking:
+
+      type: object
+
+      properties:
+
+        Ranking:
+          type: integer
+
+        Proveedor:
+          type: string
+
+        Precio_Unitario:
+          type: number
+
+        Dias_Entrega:
+          type: integer
+
+        Score_Proveedor:
+          type: number
+
+        IRP:
+          type: number
+
+    Recomendacion:
+
+      type: object
+
+      properties:
+
+        success:
+          type: boolean
+
+        producto:
+          type: string
+
+        categoria:
+          type: string
+
+        total_proveedores:
+          type: integer
+
+        ranking:
+
+          type: array
+
+          items:
+
+            $ref: "#/components/schemas/Ranking"
