@@ -16,6 +16,13 @@ def home():
         "status": "OK",
         "message": "Supplier Recommendation API funcionando correctamente"
     }
+    
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy",
+        "service": "Supplier Recommendation API"
+    }
 
 @app.post(
     "/recomendar",
