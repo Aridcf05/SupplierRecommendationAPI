@@ -1,12 +1,7 @@
-❌ No vamos a conectar Microsoft Lists directamente desde FastAPI.
-¿Por qué?
-
-Porque Microsoft Lists no es una base de datos abierta. Para acceder necesitas:
-
-Microsoft Graph API.
-Azure App Registration.
-OAuth2.
-Tokens de acceso.
-Permisos del tenant.
-
-
+services:
+  - type: web
+    name: supplier-recommendation-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
