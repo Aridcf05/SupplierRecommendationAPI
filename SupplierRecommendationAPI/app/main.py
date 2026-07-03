@@ -7,7 +7,8 @@ from app.logger import logger
 app = FastAPI(
     title="Supplier Recommendation API",
     description="Sistema Inteligente de Selección de Proveedores",
-    version="1.0.0"
+    version="1.0.0",
+    openapi_version="3.0.3"
 )
 
 @app.get("/")
