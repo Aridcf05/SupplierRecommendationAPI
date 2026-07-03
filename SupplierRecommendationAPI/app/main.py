@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from app.models import Solicitud
 from app.motor import recomendar_proveedores
+from app.schemas import RecomendacionResponse
+
 
 app = FastAPI(
     title="Supplier Recommendation API",
@@ -15,7 +17,10 @@ def home():
         "message": "Supplier Recommendation API funcionando correctamente"
     }
 
-@app.post("/recomendar")
+@app.post(
+    "/recomendar",
+    response_model=RecomendacionResponse
+)
 def recomendar(solicitud: Solicitud):
 
     ranking = recomendar_proveedores(solicitud)
