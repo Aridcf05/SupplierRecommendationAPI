@@ -4,14 +4,19 @@ from app.services import (
     calcular_irp,
     generar_ranking
 )
+from app.logger import logger
 
 
 def recomendar_proveedores(solicitud):
 
-    print("\n===== SOLICITUD RECIBIDA =====")
-    print(solicitud)
+    logger.info("========================================")
+    logger.info("Nueva solicitud recibida")
+    logger.info(f"Producto: {solicitud.producto}")
+    logger.info(f"Cantidad: {solicitud.cantidad}")
+    logger.info(f"Ciudad: {solicitud.ciudad}")
+    logger.info(f"Presupuesto: {solicitud.presupuesto}")
+    logger.info("========================================")
 
-    
     proveedores = obtener_proveedores()
     productos = obtener_productos()
 
@@ -20,6 +25,11 @@ def recomendar_proveedores(solicitud):
     ]
 
     if producto.empty:
+
+        logger.warning(
+            f"Producto '{solicitud.producto}' no encontrado."
+        )
+
         return {
             "success": False,
             "mensaje": "Producto no encontrado"
@@ -27,9 +37,15 @@ def recomendar_proveedores(solicitud):
 
     categoria = producto.iloc[0]["Categoria"]
 
+    logger.info(f"Categoría encontrada: {categoria}")
+
     proveedores_filtrados = proveedores[
         proveedores["Categoria"] == categoria
     ]
+
+    logger.info(
+        f"Proveedores encontrados: {len(proveedores_filtrados)}"
+    )
 
     evaluacion = proveedores_filtrados.copy()
 
@@ -37,11 +53,19 @@ def recomendar_proveedores(solicitud):
     # MOTOR INTELIGENTE
     # ==============================
 
+    logger.info("Calculando Score...")
+
     evaluacion = calcular_score(evaluacion)
+
+    logger.info("Calculando IRP...")
 
     evaluacion = calcular_irp(evaluacion)
 
+    logger.info("Generando ranking...")
+
     top3 = generar_ranking(evaluacion)
+
+    logger.info("Ranking generado correctamente.")
 
     return {
         "success": True,
