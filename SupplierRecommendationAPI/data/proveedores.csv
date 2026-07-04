@@ -1,4 +1,24 @@
 ID,Proveedor,Categoria,Ciudad,Precio Unitario,Dias Entrega,Estado
-1,Beiky SAC,Muebles,Lima,1180,4,Activo
-2,Grupo Muebles,Muebles,Lima,1150,5,Activo
-3,DecoHome,Muebles,Lima,1230,6,Activo
+1,Beiky SAC,Tecnología,Cuzco,1180,4,Activo
+2,Grupo Muebles,Muebles,Chimbote,1150,5,Activo
+3,DecoHome,Infraestructura,Chiclayo,1230,6,Activo
+4,Office Solutions SAC,Tecnología,Piura,1242.20,11,Verdadero
+5,Mobiliario Andino,Tecnología,Chimbote,1833.40,4,Verdadero
+6,Innova Office,Tecnología,Chiclayo,1043.54,3,Verdadero
+7,ProEquip Perú,Muebles,Cusco,3917.08,14,Verdadero
+8,ErgoWork SAC,Muebles,Chimbote,974.49,10,Verdadero
+9,TecnoOffice,Tecnología,Piura,3015.14,6,Verdadero
+10,Smart Furniture,Tecnología,Arequipa,2674.42,5,Verdadero
+11,Muebles Ejecutivos,Muebles,Chiclayo,248.62,8,Verdadero
+12,Business Equip,Tecnología,Lima,983.61,10,Verdadero
+13,Alpha Muebles,Tecnología,Ica,1625.96,14,Verdadero
+14,Nova Supply,Tecnología,Lima,1229.43,4,Verdadero
+15,Perú Office,Muebles,Arequipa,1474.64,11,Verdadero
+16,Global Furnish,Infraestructura,Lima,1219.25,12,Verdadero
+17,Integra Equip,Muebles,Trujillo,3791.22,7,Verdadero
+18,Andes Business,Muebles,Ica,2917.94,11,Verdadero
+19,Prime Office,Muebles,Tacna,1886.09,14,Verdadero
+20,Sigma Proveedores,Infraestructura,Trujillo,3892.87,10,Verdadero
+21,Omega Equip,Infraestructura,Trujillo,1012.45,8,Verdadero
+22,Delta Mobiliario,Tecnología,Tacna,2843.12,2,Verdadero
+

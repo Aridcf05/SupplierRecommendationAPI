@@ -1,3 +1,16 @@
 ID,Nombre Producto,Categoria,Precio Referencial
 1,Escritorio Ejecutivo,Muebles,1200
 2,Silla Ergonómica,Muebles,650
+3,Mesa de Reuniones,Muebles,3200
+4,Archivador Metálico,Muebles,780
+5,Gabinete para Documentos,Muebles,690
+6,Laptop Empresarial,Tecnología,4200
+7,Monitor 24 pulgadas,Tecnología,850
+8,Teclado Inalámbrico,Tecnología,120
+9,Mouse Inalámbrico,Tecnología,75
+10,Impresora Multifuncional,Tecnología,1350
+11,Proyector Multimedia,Tecnología,2600
+12,Mesa Operativa,Muebles,980
+13,Silla de Visita,Muebles,420
+14,Rack para Servidor,Infraestructura,5200
+15,UPS 1500VA,Infraestructura,1450
